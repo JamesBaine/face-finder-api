@@ -13,10 +13,8 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'whispering-oasis-74022',
-      user : 'jamesbaine',
-      password : '',
-      database : 'face-finder'
+      host : process.env.DATABASE_URL,
+      ssl: true
     }
   });
 
